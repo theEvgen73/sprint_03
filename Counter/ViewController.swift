@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func incrementButtonTapped(_ sender: Any) {
         counter += 1
     }
@@ -33,7 +32,11 @@ class ViewController: UIViewController {
     @IBAction func resetButtonTapped(_ sender: Any) {
         counter = 0
     }
-    
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd:MM:yyyy HH:mm:ss"
+        return formatter
+    }()
     
     override func viewDidLoad() {
        
